@@ -1,4 +1,4 @@
-use crate::types::{Array, ArrayDefinition};
+use crate::types::ArrayDefinition;
 
 impl syn::parse::Parse for ArrayDefinition {
     fn parse(stream: syn::parse::ParseStream) -> syn::Result<Self> {
@@ -29,6 +29,6 @@ impl syn::parse::Parse for ArrayDefinition {
                 ))
             }
         };
-        Ok(Self::new(len, *typ)?)
+        Self::new(len, *typ)
     }
 }

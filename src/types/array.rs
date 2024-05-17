@@ -41,16 +41,12 @@ where
         Self { values }
     }
 
-    pub fn add(&mut self, value: T) {
-        self.values.push(value);
-    }
-
     pub fn check_size(&self, size: usize) -> bool {
         self.values.len() <= size
     }
 
     pub fn values(&self) -> Vec<T> {
-        self.values.iter().cloned().collect()
+        self.values.to_vec()
     }
 
     pub fn ensure_size(&mut self, size: usize) -> syn::Result<()> {

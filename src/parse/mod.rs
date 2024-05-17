@@ -7,9 +7,7 @@ mod traits;
 mod types;
 
 pub mod interface {
-    pub use super::traits::{
-        ArrayLiteralConverter, IntoTokens, LiteralConverter, Tokenizer, TypeConverter,
-    };
+    pub use super::traits::{ArrayLiteralConverter, IntoTokens, Tokenizer, TypeConverter};
 
     pub struct SynInterface<T> {
         _marker: std::marker::PhantomData<T>,

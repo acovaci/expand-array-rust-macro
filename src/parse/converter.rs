@@ -1,7 +1,5 @@
-use syn::Lit;
-
 use super::interface::SynInterface;
-use super::traits::{ArrayLiteralConverter, LiteralConverter};
+use super::traits::LiteralConverter;
 
 impl LiteralConverter<u8> for SynInterface<u8> {
     fn value_from_lit(lit: syn::ExprLit) -> syn::Result<u8> {

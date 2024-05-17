@@ -81,16 +81,3 @@ pub trait Tokenizer<T> {
 pub trait IntoTokens {
     fn into_tokens(self) -> proc_macro2::TokenStream;
 }
-
-pub trait TryIntoTokens {
-    fn try_into_tokens(self) -> syn::Result<proc_macro2::TokenStream>;
-}
-
-impl<T> TryIntoTokens for T
-where
-    T: IntoTokens,
-{
-    fn try_into_tokens(self) -> syn::Result<proc_macro2::TokenStream> {
-        Ok(self.into_tokens())
-    }
-}

@@ -28,15 +28,6 @@ impl RustType {
         self.segments.is_empty()
     }
 
-    // pub fn range(start: Option<&Self>, end: Option<&Self>) -> ::std::ops::Range<Self> {
-    //     match (start, end) {
-    //         (Some(start), Some(end)) => start.clone()..end.clone(),
-    //         (Some(start), None) => start.clone()..Self::from_string(""),
-    //         (None, Some(end)) => Self::from_string("")..end.clone(),
-    //         (None, None) => Self::from_string("")..Self::from_string(""),
-    //     }
-    // }
-
     pub fn is_supported(&self) -> bool {
         SUPPORTED_TYPES
             .iter()
@@ -45,10 +36,6 @@ impl RustType {
 
     pub fn fuzzy_matches(&self, other: &Self) -> bool {
         self >= other && (self.is_supported() && other.is_supported())
-    }
-
-    pub fn segments(&self) -> &[String] {
-        &self.segments
     }
 
     pub fn exact_same_as(&self, other: &Self) -> bool {
