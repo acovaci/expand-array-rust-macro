@@ -185,7 +185,7 @@ mod tests {
         let expr = syn::parse_quote! { c"abc" };
         assert_eq!(
             SynInterface::<::std::ffi::c_char>::array_from_expr(expr).unwrap(),
-            vec![97, 98, 99]
+            vec![97, 98, 99, 0]
         );
     }
 }
