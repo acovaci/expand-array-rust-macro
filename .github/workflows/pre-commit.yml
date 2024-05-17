@@ -1,0 +1,17 @@
+name: Pre-Commit
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: pre-commit
+      uses: pre-commit/action@v3.0.1
