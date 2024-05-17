@@ -24,6 +24,11 @@ impl RustType {
         }
     }
 
+    #[allow(dead_code)]
+    pub fn segments(&self) -> &[String] {
+        &self.segments
+    }
+
     pub fn is_empty(&self) -> bool {
         self.segments.is_empty()
     }
