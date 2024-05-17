@@ -21,6 +21,7 @@ keywords = [
     "quote",
 ]
 categories = ["development-tools::ffi", "rust-patterns"]
+exclude = ["tests"]
 
 
 [lib]
