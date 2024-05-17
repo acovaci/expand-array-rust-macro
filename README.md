@@ -1,13 +1,13 @@
 # Expand Array Rust Macro
 
 ![](https://img.shields.io/github/actions/workflow/status/acovaci/expand-array-rust-macro/rust.yml)
-[
-![](https://img.shields.io/crates/v/expand-array)
-![](https://img.shields.io/crates/d/expand-array)
-![](https://img.shields.io/crates/l/expand-array)
+[![](https://img.shields.io/crates/v/expand-array)
 ](https://crates.io/crates/expand-array)
-[
-![](https://docs.rs/expand_array/badge.svg)
+[![](https://img.shields.io/crates/d/expand-array)
+](https://crates.io/crates/expand-array)
+[![](https://img.shields.io/crates/l/expand-array)
+](https://crates.io/crates/expand-array)
+[![](https://docs.rs/expand_array/badge.svg)
 ](https://docs.rs/expand-array)
 
 This crate provides a macro to convert a static array to a fixed-size array.
