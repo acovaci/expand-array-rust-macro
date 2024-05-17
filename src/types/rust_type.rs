@@ -40,7 +40,7 @@ impl RustType {
     pub fn is_supported(&self) -> bool {
         SUPPORTED_TYPES
             .iter()
-            .any(|&typ| (..RustType::from(typ)).contains(self))
+            .any(|&typ| (..=RustType::from(typ)).contains(self))
     }
 
     pub fn fuzzy_matches(&self, other: &Self) -> bool {
@@ -188,7 +188,7 @@ mod tests {
         let end = RustType::from_string("::std::primitive::u8");
         let value = RustType::from_string("std::primitive::u8");
         assert!(end.fuzzy_matches(&start));
-        assert!(start.fuzzy_matches(&end));
+        assert!(!start.fuzzy_matches(&end));
         assert!(value.fuzzy_matches(&start));
         assert!(end.fuzzy_matches(&value));
     }
