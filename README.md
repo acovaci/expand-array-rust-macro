@@ -6,6 +6,9 @@
 ![](https://img.shields.io/crates/d/expand-array)
 ![](https://img.shields.io/crates/l/expand-array)
 ](https://crates.io/crates/expand-array)
+[
+![](https://docs.rs/expand_array/badge.svg)
+](https://docs.rs/expand-array)
 
 This crate provides a macro to convert a static array to a fixed-size array.
 Limited type conversion is supported. This is useful when you need to make
