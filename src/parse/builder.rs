@@ -2,7 +2,7 @@ use crate::types::{Array, ArrayDefinition, RustType};
 
 use super::interface::IntoTokens;
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct ArrayTokenizer {
     array: syn::Expr,
 }

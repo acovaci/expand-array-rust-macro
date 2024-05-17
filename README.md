@@ -1,8 +1,8 @@
 # Expand Array Rust Macro
 
-This project is a simple macro that allows you to expand an array into a list of
-arguments. This is useful when you need to make available global constants in a
-dynamic library, for example.
+This crate provides a macro to convert a static array to a fixed-size array.
+Limited type conversion is supported. This is useful when you need to make
+available global constants in a dynamic library, for example.
 
 ## Limitations
 
