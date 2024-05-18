@@ -7,14 +7,6 @@ pub use bitify_impl::main::bitify_func;
 mod tests {
     use super::*;
 
-    const fn test() -> i32 {
-        const fn test2(x: i32) -> i32 {
-            x + 1
-        }
-
-        test2(1)
-    }
-
     #[test]
     fn test_array() {
         let x = arrr!([1u8, 2, 3, 4] as [i8; 10]);

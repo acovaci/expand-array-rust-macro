@@ -40,6 +40,7 @@ fn test_arrr_u8_bytestr() {
     );
 }
 
+#[test]
 fn test_arrr_u8_str() {
     let output: [u8; 10] = arrr!("hello" as [u8; 10]);
 
@@ -49,6 +50,7 @@ fn test_arrr_u8_str() {
     );
 }
 
+#[test]
 fn test_arr_u8_c_char() {
     let output: [::std::ffi::c_char; 10] =
         arrr!([104u8, 101, 108, 108, 111] as [::std::ffi::c_char; 10]);
@@ -58,6 +60,7 @@ fn test_arr_u8_c_char() {
     );
 }
 
+#[test]
 fn test_arr_u8_c_str() {
     let output: [::std::ffi::c_char; 10] = arrr!(c"hello" as [::std::ffi::c_char; 10]);
     assert_eq!(
