@@ -4,4 +4,4 @@ version = 3
 
 [[package]]
 name = "expand_array"
-version = "1.0.0"
+version = "0.2.0"
